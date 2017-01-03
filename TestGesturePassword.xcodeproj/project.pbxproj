@@ -1,0 +1,589 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		15854A881E1B4770004B0992 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15854A871E1B4770004B0992 /* main.m */; };
+		15854A8B1E1B4770004B0992 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15854A8A1E1B4770004B0992 /* AppDelegate.m */; };
+		15854A8E1E1B4770004B0992 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15854A8D1E1B4770004B0992 /* ViewController.m */; };
+		15854A911E1B4770004B0992 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15854A8F1E1B4770004B0992 /* Main.storyboard */; };
+		15854A931E1B4770004B0992 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15854A921E1B4770004B0992 /* Assets.xcassets */; };
+		15854A961E1B4770004B0992 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15854A941E1B4770004B0992 /* LaunchScreen.storyboard */; };
+		15854AA11E1B4770004B0992 /* TestGesturePasswordTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 15854AA01E1B4770004B0992 /* TestGesturePasswordTests.m */; };
+		15854AAC1E1B4770004B0992 /* TestGesturePasswordUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 15854AAB1E1B4770004B0992 /* TestGesturePasswordUITests.m */; };
+		15854AC41E1B47C9004B0992 /* GesturePasswordButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 15854ABB1E1B47C9004B0992 /* GesturePasswordButton.m */; };
+		15854AC51E1B47C9004B0992 /* GesturePasswordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15854ABD1E1B47C9004B0992 /* GesturePasswordController.m */; };
+		15854AC61E1B47C9004B0992 /* GesturePasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15854ABF1E1B47C9004B0992 /* GesturePasswordView.m */; };
+		15854AC71E1B47C9004B0992 /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 15854AC11E1B47C9004B0992 /* KeychainItemWrapper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		15854AC81E1B47C9004B0992 /* TentacleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15854AC31E1B47C9004B0992 /* TentacleView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		15854A9D1E1B4770004B0992 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 15854A7B1E1B4770004B0992 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 15854A821E1B4770004B0992;
+			remoteInfo = TestGesturePassword;
+		};
+		15854AA81E1B4770004B0992 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 15854A7B1E1B4770004B0992 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 15854A821E1B4770004B0992;
+			remoteInfo = TestGesturePassword;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		156B53BF1E1B4BC200992A65 /* DEFINE.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DEFINE.h; sourceTree = "<group>"; };
+		15854A831E1B4770004B0992 /* TestGesturePassword.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestGesturePassword.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		15854A871E1B4770004B0992 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		15854A891E1B4770004B0992 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		15854A8A1E1B4770004B0992 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		15854A8C1E1B4770004B0992 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		15854A8D1E1B4770004B0992 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		15854A901E1B4770004B0992 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		15854A921E1B4770004B0992 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		15854A951E1B4770004B0992 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		15854A971E1B4770004B0992 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15854A9C1E1B4770004B0992 /* TestGesturePasswordTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestGesturePasswordTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		15854AA01E1B4770004B0992 /* TestGesturePasswordTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestGesturePasswordTests.m; sourceTree = "<group>"; };
+		15854AA21E1B4770004B0992 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15854AA71E1B4770004B0992 /* TestGesturePasswordUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestGesturePasswordUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		15854AAB1E1B4770004B0992 /* TestGesturePasswordUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestGesturePasswordUITests.m; sourceTree = "<group>"; };
+		15854AAD1E1B4770004B0992 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15854ABA1E1B47C9004B0992 /* GesturePasswordButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GesturePasswordButton.h; sourceTree = "<group>"; };
+		15854ABB1E1B47C9004B0992 /* GesturePasswordButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GesturePasswordButton.m; sourceTree = "<group>"; };
+		15854ABC1E1B47C9004B0992 /* GesturePasswordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GesturePasswordController.h; sourceTree = "<group>"; };
+		15854ABD1E1B47C9004B0992 /* GesturePasswordController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GesturePasswordController.m; sourceTree = "<group>"; };
+		15854ABE1E1B47C9004B0992 /* GesturePasswordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GesturePasswordView.h; sourceTree = "<group>"; };
+		15854ABF1E1B47C9004B0992 /* GesturePasswordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GesturePasswordView.m; sourceTree = "<group>"; };
+		15854AC01E1B47C9004B0992 /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
+		15854AC11E1B47C9004B0992 /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
+		15854AC21E1B47C9004B0992 /* TentacleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TentacleView.h; sourceTree = "<group>"; };
+		15854AC31E1B47C9004B0992 /* TentacleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TentacleView.m; sourceTree = "<group>"; };
+		15854AC91E1B49B3004B0992 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		15854A801E1B4770004B0992 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15854A991E1B4770004B0992 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15854AA41E1B4770004B0992 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		15854A7A1E1B4770004B0992 = {
+			isa = PBXGroup;
+			children = (
+				15854A851E1B4770004B0992 /* TestGesturePassword */,
+				15854A9F1E1B4770004B0992 /* TestGesturePasswordTests */,
+				15854AAA1E1B4770004B0992 /* TestGesturePasswordUITests */,
+				15854A841E1B4770004B0992 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		15854A841E1B4770004B0992 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				15854A831E1B4770004B0992 /* TestGesturePassword.app */,
+				15854A9C1E1B4770004B0992 /* TestGesturePasswordTests.xctest */,
+				15854AA71E1B4770004B0992 /* TestGesturePasswordUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		15854A851E1B4770004B0992 /* TestGesturePassword */ = {
+			isa = PBXGroup;
+			children = (
+				15854AB91E1B47C9004B0992 /* GesturePassword */,
+				15854A891E1B4770004B0992 /* AppDelegate.h */,
+				15854A8A1E1B4770004B0992 /* AppDelegate.m */,
+				15854A8C1E1B4770004B0992 /* ViewController.h */,
+				15854A8D1E1B4770004B0992 /* ViewController.m */,
+				15854A8F1E1B4770004B0992 /* Main.storyboard */,
+				15854A921E1B4770004B0992 /* Assets.xcassets */,
+				15854A941E1B4770004B0992 /* LaunchScreen.storyboard */,
+				15854A971E1B4770004B0992 /* Info.plist */,
+				15854AC91E1B49B3004B0992 /* PrefixHeader.pch */,
+				156B53BF1E1B4BC200992A65 /* DEFINE.h */,
+				15854A861E1B4770004B0992 /* Supporting Files */,
+			);
+			path = TestGesturePassword;
+			sourceTree = "<group>";
+		};
+		15854A861E1B4770004B0992 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				15854A871E1B4770004B0992 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		15854A9F1E1B4770004B0992 /* TestGesturePasswordTests */ = {
+			isa = PBXGroup;
+			children = (
+				15854AA01E1B4770004B0992 /* TestGesturePasswordTests.m */,
+				15854AA21E1B4770004B0992 /* Info.plist */,
+			);
+			path = TestGesturePasswordTests;
+			sourceTree = "<group>";
+		};
+		15854AAA1E1B4770004B0992 /* TestGesturePasswordUITests */ = {
+			isa = PBXGroup;
+			children = (
+				15854AAB1E1B4770004B0992 /* TestGesturePasswordUITests.m */,
+				15854AAD1E1B4770004B0992 /* Info.plist */,
+			);
+			path = TestGesturePasswordUITests;
+			sourceTree = "<group>";
+		};
+		15854AB91E1B47C9004B0992 /* GesturePassword */ = {
+			isa = PBXGroup;
+			children = (
+				15854ABA1E1B47C9004B0992 /* GesturePasswordButton.h */,
+				15854ABB1E1B47C9004B0992 /* GesturePasswordButton.m */,
+				15854ABC1E1B47C9004B0992 /* GesturePasswordController.h */,
+				15854ABD1E1B47C9004B0992 /* GesturePasswordController.m */,
+				15854ABE1E1B47C9004B0992 /* GesturePasswordView.h */,
+				15854ABF1E1B47C9004B0992 /* GesturePasswordView.m */,
+				15854AC01E1B47C9004B0992 /* KeychainItemWrapper.h */,
+				15854AC11E1B47C9004B0992 /* KeychainItemWrapper.m */,
+				15854AC21E1B47C9004B0992 /* TentacleView.h */,
+				15854AC31E1B47C9004B0992 /* TentacleView.m */,
+			);
+			path = GesturePassword;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		15854A821E1B4770004B0992 /* TestGesturePassword */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15854AB01E1B4770004B0992 /* Build configuration list for PBXNativeTarget "TestGesturePassword" */;
+			buildPhases = (
+				15854A7F1E1B4770004B0992 /* Sources */,
+				15854A801E1B4770004B0992 /* Frameworks */,
+				15854A811E1B4770004B0992 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TestGesturePassword;
+			productName = TestGesturePassword;
+			productReference = 15854A831E1B4770004B0992 /* TestGesturePassword.app */;
+			productType = "com.apple.product-type.application";
+		};
+		15854A9B1E1B4770004B0992 /* TestGesturePasswordTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15854AB31E1B4770004B0992 /* Build configuration list for PBXNativeTarget "TestGesturePasswordTests" */;
+			buildPhases = (
+				15854A981E1B4770004B0992 /* Sources */,
+				15854A991E1B4770004B0992 /* Frameworks */,
+				15854A9A1E1B4770004B0992 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				15854A9E1E1B4770004B0992 /* PBXTargetDependency */,
+			);
+			name = TestGesturePasswordTests;
+			productName = TestGesturePasswordTests;
+			productReference = 15854A9C1E1B4770004B0992 /* TestGesturePasswordTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		15854AA61E1B4770004B0992 /* TestGesturePasswordUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15854AB61E1B4770004B0992 /* Build configuration list for PBXNativeTarget "TestGesturePasswordUITests" */;
+			buildPhases = (
+				15854AA31E1B4770004B0992 /* Sources */,
+				15854AA41E1B4770004B0992 /* Frameworks */,
+				15854AA51E1B4770004B0992 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				15854AA91E1B4770004B0992 /* PBXTargetDependency */,
+			);
+			name = TestGesturePasswordUITests;
+			productName = TestGesturePasswordUITests;
+			productReference = 15854AA71E1B4770004B0992 /* TestGesturePasswordUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		15854A7B1E1B4770004B0992 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = liguoqiang;
+				TargetAttributes = {
+					15854A821E1B4770004B0992 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+					15854A9B1E1B4770004B0992 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 15854A821E1B4770004B0992;
+					};
+					15854AA61E1B4770004B0992 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 15854A821E1B4770004B0992;
+					};
+				};
+			};
+			buildConfigurationList = 15854A7E1E1B4770004B0992 /* Build configuration list for PBXProject "TestGesturePassword" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 15854A7A1E1B4770004B0992;
+			productRefGroup = 15854A841E1B4770004B0992 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				15854A821E1B4770004B0992 /* TestGesturePassword */,
+				15854A9B1E1B4770004B0992 /* TestGesturePasswordTests */,
+				15854AA61E1B4770004B0992 /* TestGesturePasswordUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		15854A811E1B4770004B0992 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15854A961E1B4770004B0992 /* LaunchScreen.storyboard in Resources */,
+				15854A931E1B4770004B0992 /* Assets.xcassets in Resources */,
+				15854A911E1B4770004B0992 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15854A9A1E1B4770004B0992 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15854AA51E1B4770004B0992 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		15854A7F1E1B4770004B0992 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15854AC41E1B47C9004B0992 /* GesturePasswordButton.m in Sources */,
+				15854A8E1E1B4770004B0992 /* ViewController.m in Sources */,
+				15854A8B1E1B4770004B0992 /* AppDelegate.m in Sources */,
+				15854AC61E1B47C9004B0992 /* GesturePasswordView.m in Sources */,
+				15854AC81E1B47C9004B0992 /* TentacleView.m in Sources */,
+				15854A881E1B4770004B0992 /* main.m in Sources */,
+				15854AC51E1B47C9004B0992 /* GesturePasswordController.m in Sources */,
+				15854AC71E1B47C9004B0992 /* KeychainItemWrapper.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15854A981E1B4770004B0992 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15854AA11E1B4770004B0992 /* TestGesturePasswordTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15854AA31E1B4770004B0992 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15854AAC1E1B4770004B0992 /* TestGesturePasswordUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		15854A9E1E1B4770004B0992 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 15854A821E1B4770004B0992 /* TestGesturePassword */;
+			targetProxy = 15854A9D1E1B4770004B0992 /* PBXContainerItemProxy */;
+		};
+		15854AA91E1B4770004B0992 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 15854A821E1B4770004B0992 /* TestGesturePassword */;
+			targetProxy = 15854AA81E1B4770004B0992 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		15854A8F1E1B4770004B0992 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				15854A901E1B4770004B0992 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		15854A941E1B4770004B0992 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				15854A951E1B4770004B0992 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		15854AAE1E1B4770004B0992 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		15854AAF1E1B4770004B0992 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		15854AB11E1B4770004B0992 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Junjie Zhang (NQF4Y6T53J)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/TestGesturePassword/PrefixHeader.pch";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = TestGesturePassword/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dongpi.TestGesturePassword;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "fa044659-0f75-4cdc-9302-c430ab4a2a81";
+			};
+			name = Debug;
+		};
+		15854AB21E1B4770004B0992 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Junjie Zhang (NQF4Y6T53J)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/TestGesturePassword/PrefixHeader.pch";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = TestGesturePassword/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dongpi.TestGesturePassword;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "fa044659-0f75-4cdc-9302-c430ab4a2a81";
+			};
+			name = Release;
+		};
+		15854AB41E1B4770004B0992 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TestGesturePasswordTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dongpi.TestGesturePasswordTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestGesturePassword.app/TestGesturePassword";
+			};
+			name = Debug;
+		};
+		15854AB51E1B4770004B0992 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TestGesturePasswordTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dongpi.TestGesturePasswordTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestGesturePassword.app/TestGesturePassword";
+			};
+			name = Release;
+		};
+		15854AB71E1B4770004B0992 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TestGesturePasswordUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dongpi.TestGesturePasswordUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TestGesturePassword;
+			};
+			name = Debug;
+		};
+		15854AB81E1B4770004B0992 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TestGesturePasswordUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dongpi.TestGesturePasswordUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TestGesturePassword;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		15854A7E1E1B4770004B0992 /* Build configuration list for PBXProject "TestGesturePassword" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15854AAE1E1B4770004B0992 /* Debug */,
+				15854AAF1E1B4770004B0992 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15854AB01E1B4770004B0992 /* Build configuration list for PBXNativeTarget "TestGesturePassword" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15854AB11E1B4770004B0992 /* Debug */,
+				15854AB21E1B4770004B0992 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15854AB31E1B4770004B0992 /* Build configuration list for PBXNativeTarget "TestGesturePasswordTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15854AB41E1B4770004B0992 /* Debug */,
+				15854AB51E1B4770004B0992 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15854AB61E1B4770004B0992 /* Build configuration list for PBXNativeTarget "TestGesturePasswordUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15854AB71E1B4770004B0992 /* Debug */,
+				15854AB81E1B4770004B0992 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 15854A7B1E1B4770004B0992 /* Project object */;
+}
