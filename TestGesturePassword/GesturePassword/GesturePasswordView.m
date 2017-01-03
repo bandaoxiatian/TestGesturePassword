@@ -96,9 +96,7 @@
     return self;
 }
 
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-
+// 绘制渐变背景
 - (void)drawRect:(CGRect)rect
 {
     // Drawing code
@@ -118,9 +116,13 @@
                                 kCGGradientDrawsBeforeStartLocation);
 }
 
+#pragma mark - TouchBeginDelegate
+
 - (void)gestureTouchBegin {
     [self.state setText:@""];
 }
+
+#pragma mark - button selector
 
 -(void)forget{
     [gesturePasswordDelegate forget];

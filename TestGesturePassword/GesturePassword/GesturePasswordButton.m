@@ -39,12 +39,12 @@
     
     if (selected) {
         if (success) {
-            CGContextSetRGBStrokeColor(context, 2/255.f, 174/255.f, 240/255.f,1);//线条颜色
-            CGContextSetRGBFillColor(context,2/255.f, 174/255.f, 240/255.f,1);
+            CGContextSetStrokeColor(context, CGColorGetComponents(kSuccessStrokeColor.CGColor));
+            CGContextSetFillColor(context, CGColorGetComponents(kSuccessStrokeColor.CGColor));
         }
         else {
-            CGContextSetRGBStrokeColor(context, 208/255.f, 36/255.f, 36/255.f,1);//线条颜色
-            CGContextSetRGBFillColor(context,208/255.f, 36/255.f, 36/255.f,1);
+            CGContextSetStrokeColor(context, CGColorGetComponents(kFailureStrokeColor.CGColor));
+            CGContextSetFillColor(context, CGColorGetComponents(kFailureStrokeColor.CGColor));
         }
         CGRect frame = CGRectMake(bounds.size.width/2-bounds.size.width/8+1, bounds.size.height/2-bounds.size.height/8, bounds.size.width/4, bounds.size.height/4);
         
@@ -52,7 +52,7 @@
         CGContextFillPath(context);
     }
     else{
-        CGContextSetRGBStrokeColor(context, 1,1,1,1);//线条颜色
+        CGContextSetStrokeColor(context, CGColorGetComponents(kInitialStrokeColor.CGColor));
     }
     
     CGContextSetLineWidth(context,2);
@@ -60,16 +60,15 @@
     CGContextAddEllipseInRect(context,frame);
     CGContextStrokePath(context);
     if (success) {
-        CGContextSetRGBFillColor(context,30/255.f, 175/255.f, 235/255.f,0.3);
+        CGContextSetFillColor(context, CGColorGetComponents(kSuccessFillColor.CGColor));
     }
     else {
-        CGContextSetRGBFillColor(context,208/255.f, 36/255.f, 36/255.f,0.3);
+        CGContextSetFillColor(context, CGColorGetComponents(kFailureFillColor.CGColor));
     }
     CGContextAddEllipseInRect(context,frame);
     if (selected) {
         CGContextFillPath(context);
     }
-    
 }
 
 
