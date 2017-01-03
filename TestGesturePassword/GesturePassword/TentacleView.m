@@ -17,8 +17,8 @@
     CGPoint lineStartPoint;
     CGPoint lineEndPoint;
     
-    NSMutableArray * touchesArray;
-    NSMutableArray * touchedArray;
+    NSMutableArray<NSDictionary *> * touchesButtons;
+    NSMutableArray<NSString *> * touchedTags;
     BOOL success;
 }
 @synthesize buttonArray;
@@ -33,8 +33,8 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        touchesArray = [[NSMutableArray alloc]initWithCapacity:0];
-        touchedArray = [[NSMutableArray alloc]initWithCapacity:0];
+        touchesButtons = [[NSMutableArray alloc]initWithCapacity:0];
+        touchedTags = [[NSMutableArray alloc]initWithCapacity:0];
         [self setBackgroundColor:[UIColor clearColor]];
         [self setUserInteractionEnabled:YES];
         success = 1;
@@ -43,10 +43,11 @@
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+//    NSLog(@"%s", __FUNCTION__);
     CGPoint touchPoint;
     UITouch *touch = [touches anyObject];
-    [touchesArray removeAllObjects];
-    [touchedArray removeAllObjects];
+    [touchesButtons removeAllObjects];
+    [touchedTags removeAllObjects];
     [touchBeginDelegate gestureTouchBegin];
     success=1;
     if (touch) {
@@ -59,7 +60,7 @@
                 CGRect frameTemp = buttonTemp.frame;
                 CGPoint point = CGPointMake(frameTemp.origin.x+frameTemp.size.width/2,frameTemp.origin.y+frameTemp.size.height/2);
                 NSDictionary * dict = [NSDictionary dictionaryWithObjectsAndKeys:[NSString stringWithFormat:@"%f",point.x],@"x",[NSString stringWithFormat:@"%f",point.y],@"y", nil];
-                [touchesArray addObject:dict];
+                [touchesButtons addObject:dict];
                 lineStartPoint = touchPoint;
             }
             [buttonTemp setNeedsDisplay];
@@ -70,6 +71,7 @@
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
+//    NSLog(@"%s", __FUNCTION__);
     CGPoint touchPoint;
     UITouch *touch = [touches anyObject];
     if (touch) {
@@ -77,18 +79,18 @@
         for (int i=0; i<buttonArray.count; i++) {
             GesturePasswordButton * buttonTemp = ((GesturePasswordButton *)[buttonArray objectAtIndex:i]);
             if (CGRectContainsPoint(buttonTemp.frame,touchPoint)) {
-                if ([touchedArray containsObject:[NSString stringWithFormat:@"num%d",i]]) {
+                if ([touchedTags containsObject:[NSString stringWithFormat:@"num%d",i]]) {
                     lineEndPoint = touchPoint;
                     [self setNeedsDisplay];
                     return;
                 }
-                [touchedArray addObject:[NSString stringWithFormat:@"num%d",i]];
+                [touchedTags addObject:[NSString stringWithFormat:@"num%d",i]];
                 [buttonTemp setSelected:YES];
                 [buttonTemp setNeedsDisplay];
                 CGRect frameTemp = buttonTemp.frame;
                 CGPoint point = CGPointMake(frameTemp.origin.x+frameTemp.size.width/2,frameTemp.origin.y+frameTemp.size.height/2);
                 NSDictionary * dict = [NSDictionary dictionaryWithObjectsAndKeys:[NSString stringWithFormat:@"%f",point.x],@"x",[NSString stringWithFormat:@"%f",point.y],@"y",[NSString stringWithFormat:@"%d",i],@"num", nil];
-                [touchesArray addObject:dict];
+                [touchesButtons addObject:dict];
                 break;
             }
         }
@@ -98,11 +100,22 @@
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
+//    NSLog(@"%s", __FUNCTION__);
     NSMutableString * resultString=[NSMutableString string];
-    for ( NSDictionary * num in touchesArray ){
+    for ( NSDictionary * num in touchesButtons ){
         if(![num objectForKey:@"num"])break;
         [resultString appendString:[num objectForKey:@"num"]];
     }
+    NSLog(@"resultString:%@", resultString);
+    
+    for (int i=0; i<touchesButtons.count; i++) {
+        NSInteger selection = [[[touchesButtons objectAtIndex:i] objectForKey:@"num"]intValue];
+        GesturePasswordButton * buttonTemp = ((GesturePasswordButton *)[buttonArray objectAtIndex:selection]);
+        [buttonTemp setSuccess:success];
+        [buttonTemp setNeedsDisplay];
+    }
+    [self setNeedsDisplay];
+    
     if(style==1){
         success = [rerificationDelegate verification:resultString];
     }
@@ -111,14 +124,6 @@
     }else{
         success = [changeDelegate changePassword:resultString];
     }
-    
-    for (int i=0; i<touchesArray.count; i++) {
-        NSInteger selection = [[[touchesArray objectAtIndex:i] objectForKey:@"num"]intValue];
-        GesturePasswordButton * buttonTemp = ((GesturePasswordButton *)[buttonArray objectAtIndex:selection]);
-        [buttonTemp setSuccess:success];
-        [buttonTemp setNeedsDisplay];
-    }
-    [self setNeedsDisplay];
 }
 
 // Only override drawRect: if you perform custom drawing.
@@ -127,10 +132,10 @@
 {
     // Drawing code
 //    if (touchesArray.count<2)return;
-    for (int i=0; i<touchesArray.count; i++) {
+    for (int i=0; i<touchesButtons.count; i++) {
         CGContextRef context = UIGraphicsGetCurrentContext();
-        if (![[touchesArray objectAtIndex:i] objectForKey:@"num"]) { //防止过快滑动产生垃圾数据
-            [touchesArray removeObjectAtIndex:i];
+        if (![[touchesButtons objectAtIndex:i] objectForKey:@"num"]) { //防止过快滑动产生垃圾数据
+            [touchesButtons removeObjectAtIndex:i];
             continue;
         }
         if (success) {
@@ -141,9 +146,9 @@
         }
         
         CGContextSetLineWidth(context,5);
-        CGContextMoveToPoint(context, [[[touchesArray objectAtIndex:i] objectForKey:@"x"] floatValue], [[[touchesArray objectAtIndex:i] objectForKey:@"y"] floatValue]);
-        if (i<touchesArray.count-1) {
-            CGContextAddLineToPoint(context, [[[touchesArray objectAtIndex:i+1] objectForKey:@"x"] floatValue],[[[touchesArray objectAtIndex:i+1] objectForKey:@"y"] floatValue]);
+        CGContextMoveToPoint(context, [[[touchesButtons objectAtIndex:i] objectForKey:@"x"] floatValue], [[[touchesButtons objectAtIndex:i] objectForKey:@"y"] floatValue]);
+        if (i<touchesButtons.count-1) {
+            CGContextAddLineToPoint(context, [[[touchesButtons objectAtIndex:i+1] objectForKey:@"x"] floatValue],[[[touchesButtons objectAtIndex:i+1] objectForKey:@"y"] floatValue]);
         }
         else{
             if (success) {
@@ -155,8 +160,8 @@
 }
 
 - (void)enterArgin {
-    [touchesArray removeAllObjects];
-    [touchedArray removeAllObjects];
+    [touchesButtons removeAllObjects];
+    [touchedTags removeAllObjects];
     for (int i=0; i<buttonArray.count; i++) {
         GesturePasswordButton * buttonTemp = ((GesturePasswordButton *)[buttonArray objectAtIndex:i]);
         [buttonTemp setSelected:NO];
